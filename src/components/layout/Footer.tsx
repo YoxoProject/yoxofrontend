@@ -21,8 +21,8 @@ export function Footer() {
                         </Typography>
                     </div>
                     <div className="flex flex-col items-end gap-2 text-sm text-muted-foreground">
-                        <Link className="hover:underline" href="/legacy/legal-notice">
-                            Mentions légale
+                        <Link className="hover:underline" href="/mentions-legales">
+                            Mentions légales
                         </Link>
                         <Link className="hover:underline" href="/legacy/cgu">
                             CGU

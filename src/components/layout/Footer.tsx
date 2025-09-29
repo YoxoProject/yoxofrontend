@@ -24,7 +24,7 @@ export function Footer() {
                         <Link className="hover:underline" href="/mentions-legales">
                             Mentions légales
                         </Link>
-                        <Link className="hover:underline" href="/legacy/cgu">
+                        <Link className="hover:underline" href="/conditions-generales-utilisation">
                             CGU
                         </Link>
                     </div>

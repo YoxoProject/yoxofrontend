@@ -3,6 +3,7 @@ import Image from "next/image";
 import {SiteConfig} from "@/lib/site-config";
 import {Typography} from "@/components/ui/typography";
 import {ThemeToggle} from "@/components/theme/ThemeToggle";
+import {UserButton} from "@/components/auth/UserButton";
 
 export function Header() {
     return (
@@ -15,7 +16,7 @@ export function Header() {
                     </Typography>
                 </div>
                 <div className="flex flex-1 items-center justify-end space-x-4">
-                    <p>TODO</p>
+                    <UserButton />
                     <ThemeToggle />
                 </div>
             </div>

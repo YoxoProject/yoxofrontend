@@ -44,7 +44,7 @@ export function CookieBanner() {
     }
 
     return (
-        <div className="fixed bottom-4 right-4 z-50 w-full max-w-md animate-in slide-in-from-bottom-5">
+        <div className="fixed bottom-4 left-3 right-3 z-50 w-auto sm:left-auto sm:right-4 sm:max-w-md animate-in slide-in-from-bottom-5">
             <Card className="border-2 shadow-lg">
                 <CardHeader className="relative pb-3">
                     <button

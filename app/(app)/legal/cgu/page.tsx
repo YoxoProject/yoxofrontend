@@ -426,7 +426,7 @@ export default function CGUPage() {
                             </div>
                             <Typography variant="muted" className="text-sm">
                                 Conformément au RGPD, vous disposez d&apos;un droit à l&apos;effacement de vos données. Voir nos{' '}
-                                <Link href="/mentions-legales" className="text-primary underline hover:no-underline">
+                                <Link href="/legal/mentions" className="text-primary underline hover:no-underline">
                                     Mentions légales
                                 </Link>{' '}
                                 pour plus d&apos;informations sur vos droits.
@@ -531,7 +531,7 @@ export default function CGUPage() {
                                 </div>
                                 <div className="flex items-start gap-2">
                                     <strong className="min-w-[100px]">Site web :</strong>
-                                    <Link href="/public" className="text-primary underline hover:no-underline">
+                                    <Link href="/" className="text-primary underline hover:no-underline">
                                         yoxo.software
                                     </Link>
                                 </div>

@@ -61,10 +61,10 @@ export function CookieBanner() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                     <Typography variant="p" className="text-sm text-muted-foreground">
-                        Les cookies d'authentification sont nécessaires au fonctionnement du site. Les cookies analytiques (PostHog) nous permettent de comprendre comment vous utilisez le site.
+                        Les cookies d&apos;authentification sont nécessaires au fonctionnement du site. Les cookies analytiques (PostHog) nous permettent de comprendre comment vous utilisez le site.
                     </Typography>
                     <Link
-                        href="/mentions-legales"
+                        href="/legal/mentions"
                         className="text-sm text-primary underline hover:no-underline inline-block"
                     >
                         En savoir plus sur notre politique de cookies

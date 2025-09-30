@@ -1,35 +1,20 @@
 
 'use client';
 
-import {Suspense, useEffect} from 'react';
-import {usePathname, useSearchParams} from 'next/navigation';
-import posthog from '@/lib/posthog';
-
-// https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
-function PostHogPageView() {
-    const pathname = usePathname();
-    const searchParams = useSearchParams();
-
-    useEffect(() => {
-        // Capturer les pageviews uniquement si l'utilisateur a consenti
-        if (typeof window !== 'undefined' && posthog && !posthog.has_opted_out_capturing()) {
-            const url = pathname + (searchParams?.toString() ? `?${searchParams.toString()}` : '');
-            posthog.capture('$pageview', {
-                $current_url: url,
-            });
-        }
-    }, [pathname, searchParams]);
-
-    return null;
-}
-
+/**
+ * PostHogProvider - Composant wrapper pour PostHog
+ *
+ * Note : L'initialisation de PostHog est maintenant gérée dans instrumentation-client.ts
+ * pour des performances optimales (s'exécute avant l'hydratation React).
+ *
+ * Le tracking des pageviews est géré automatiquement par onRouterTransitionStart
+ * dans instrumentation-client.ts.
+ *
+ * Ce composant est conservé pour d'éventuels besoins futurs liés à PostHog
+ * (ex: gestion du consentement, features flags, etc.)
+ */
 export function PostHogProvider({children}: {children: React.ReactNode}) {
-    return (
-        <>
-            <Suspense fallback={null}>
-                <PostHogPageView />
-            </Suspense>
-            {children}
-        </>
-    );
+    // PostHog est initialisé dans instrumentation-client.ts
+    // Le tracking est automatique via onRouterTransitionStart
+    return <>{children}</>;
 }

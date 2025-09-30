@@ -21,6 +21,8 @@ export const env = createEnv({
     NEXT_PUBLIC_OAUTH_AUTHORIZATION_ENDPOINT: z.string().url(),
     NEXT_PUBLIC_OAUTH_TOKEN_ENDPOINT: z.string().url(),
     NEXT_PUBLIC_OAUTH_SCOPE: z.string().default("api_access profile"),
+    NEXT_PUBLIC_POSTHOG_KEY: z.string().optional(),
+    NEXT_PUBLIC_POSTHOG_HOST: z.string().url().default("https://eu.posthog.com"),
   },
 
   /**
@@ -37,6 +39,8 @@ export const env = createEnv({
     NEXT_PUBLIC_OAUTH_AUTHORIZATION_ENDPOINT: process.env.NEXT_PUBLIC_OAUTH_AUTHORIZATION_ENDPOINT,
     NEXT_PUBLIC_OAUTH_TOKEN_ENDPOINT: process.env.NEXT_PUBLIC_OAUTH_TOKEN_ENDPOINT,
     NEXT_PUBLIC_OAUTH_SCOPE: process.env.NEXT_PUBLIC_OAUTH_SCOPE,
+    NEXT_PUBLIC_POSTHOG_KEY: process.env.NEXT_PUBLIC_POSTHOG_KEY,
+    NEXT_PUBLIC_POSTHOG_HOST: process.env.NEXT_PUBLIC_POSTHOG_HOST,
   },
 
   /**
